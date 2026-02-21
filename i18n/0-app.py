@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-
 from flask import Flask, render_template
-
+'''
+Main script serving HTML pages to users
+'''
 app = Flask(__name__)
 
 @app.route('/')

@@ -10,6 +10,7 @@ from typing import (
 from flask import Flask, render_template, request, g
 from flask_babel import Babel
 
+
 class Config(object):
     """
     Application configuration class
@@ -17,6 +18,7 @@ class Config(object):
     LANGUAGES = ['en', 'fr']
     BABEL_DEFAULT_LOCALE = 'en'
     BABEL_DEFAULT_TIMEZONE = 'UTC'
+
 
 app = Flask(__name__)
 app.config.from_object(Config)

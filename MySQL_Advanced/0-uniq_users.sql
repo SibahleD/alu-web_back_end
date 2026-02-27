@@ -1,5 +1,6 @@
 -- Creating table
-CREATE TABLE users (
+CREATE TABLE [IF NOT EXISTS] users (
     id int NOT NULL AUTO_INCREMENT,
     email varchar(255) NOT NULL UNIQUE,
-    naame varchar(255));
+    name varchar(255)
+    Primary KEY (id));

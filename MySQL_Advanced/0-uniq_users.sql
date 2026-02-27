@@ -1,6 +1,7 @@
--- Creating table
+-- Creating table if not exists
 CREATE TABLE [IF NOT EXISTS] users (
-    id int NOT NULL AUTO_INCREMENT,
+    id int AUTO_INCREMENT NOT NULL,
     email varchar(255) NOT NULL UNIQUE,
-    name varchar(255)
-    Primary KEY (id));
+    name varchar(255),
+    Primary kep (id)
+)

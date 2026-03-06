@@ -5,7 +5,7 @@ export default function guardrail(mathFunction) {
   } catch (error) {
     queque.push(`Error: ${error.message}`);
   } finally {
-    queque.push('Guardrail was processed');
+    queque.push("Guardrail was processed");
   }
   return queque;
 }

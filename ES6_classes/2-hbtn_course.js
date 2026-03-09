@@ -15,7 +15,7 @@ export default class ALXCourse{
   }
 
   get length() {
-    return this._name;
+    return this._length;
   }
 
   set length(value) {
@@ -29,6 +29,6 @@ export default class ALXCourse{
 
   set students(value) {
     if (!Array.isArray(value)) throw new TypeError('Students must be an array');
-    this._stusents = value;
+    this._students = value;
   }
 }

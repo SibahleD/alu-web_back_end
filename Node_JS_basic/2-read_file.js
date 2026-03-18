@@ -16,7 +16,7 @@ function countStudents(path) {
       const field = columns[3];
 
       if (!fields[field]) {
-      fields[field] = [];
+        fields[field] = [];
       }
       fields[field].push(firstname);
     }
@@ -24,9 +24,9 @@ function countStudents(path) {
     for (const [field, names] of Object.entries(fields)) {
       console.log(`Number of students in ${field}: ${names.length}. List: ${names.join(', ')}`);
     }
-    } catch (err) {
-      throw new Error('Cannot load the database');
-    }
+  } catch (err) {
+    throw new Error('Cannot load the database');
+  }
 }
 
 module.exports = countStudents;

@@ -5,8 +5,8 @@ const app = http.createServer((req, res) => {
     res.end('Hello Holberton School!\n');
 });
 
-app.listen(4545, 'localhost', () => {
-    console.log(`server running at http://localhost:4545`);
+app.listen(1245, 'localhost', () => {
+    console.log(`server running at http://localhost:1245`);
 });
 
 module.exports = app;

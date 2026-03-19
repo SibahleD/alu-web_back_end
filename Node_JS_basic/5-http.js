@@ -38,7 +38,7 @@ const app = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
 
   if (req.url === '/') {
-    res.end('Hello Holberton School!\n');
+    res.end('Hello Holberton School!');
     return;
   }
 
@@ -48,7 +48,7 @@ const app = http.createServer((req, res) => {
         res.end(`This is the list of our students\n${data}\n`);
       })
       .catch((err) => {
-        res.end(`This is the list of our students\n${err.message}\n`);
+        res.end(`This is the list of our students\n${err.message}`);
       });
     return;
   }

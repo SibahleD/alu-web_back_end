@@ -1,5 +1,4 @@
 import fs from 'fs';
-import { resolve } from 'path';
 
 const readDatabase = (filepath) => new Promise((resolve, reject) => {
   fs.readFile(filepath, 'utf8', (err, data) => {
@@ -16,13 +15,13 @@ const readDatabase = (filepath) => new Promise((resolve, reject) => {
       const columns = student.split(',');
       const firstName = columns[0].trim();
       const field = columns[columns.length - 1].trim();
-      
+
       if (!fields[field]) fields[field] = [];
         fields[field].push(firstName);
-    }
+      }
 
     resolve(fields);
-  })
+  });
 });
 
-export default readDatabase ;
+export default readDatabase;

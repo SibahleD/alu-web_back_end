@@ -1,7 +1,8 @@
 const express = require('express');
+const fs = require('fs');
+
 const app = express();
 const port = 1245;
-const fs = require('fs');
 
 app.get('/', (req, res) => {
   res.send('Hello Holberton School!');
@@ -39,10 +40,10 @@ const countStudents = (path) => new Promise((resolve, reject) => {
 
 app.get('/students', async (req, res) => {
   try {
-    const result = await countStudents('database.csv');
+    const result = await countStudents(process.argv[2]);
     res.send(`This is the list of our students\n${result}`);
   } catch (err) {
-    res.status(500).send(err.message);
+    res.send(`This is the list of our students\n${err.message}`);
   }
 });
 

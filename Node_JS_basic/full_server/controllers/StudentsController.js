@@ -6,9 +6,7 @@ class StudentsController {
       const dbFile = process.argv[2];
       const fields = await readDatabase(dbFile);
 
-      const sortedFields = Object.keys(fields).sort((a, b) =>
-        a.toLowerCase().localeCompare(b.toLowerCase())
-      );
+      const sortedFields = Object.keys(fields).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
       const lines = ['This is the list of our students'];
       for (const field of sortedFields) {

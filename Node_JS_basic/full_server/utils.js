@@ -17,8 +17,8 @@ const readDatabase = (filepath) => new Promise((resolve, reject) => {
       const field = columns[columns.length - 1].trim();
 
       if (!fields[field]) fields[field] = [];
-        fields[field].push(firstName);
-      }
+      fields[field].push(firstName);
+    }
 
     resolve(fields);
   });

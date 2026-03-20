@@ -12,7 +12,7 @@ class StudentsController {
       for (const field of sortedFields) {
         const names = fields[field];
         lines.push(
-          `Number of students in ${field}: ${names.length}. List: ${names.join(', ')}`
+          `Number of students in ${field}: ${names.length}. List: ${names.join(', ')}`,
         );
       }
 
